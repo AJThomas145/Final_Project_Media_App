@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.Arrays;
 
 @Entity
 @Table
@@ -37,7 +38,7 @@ public class SavedMovie {
         this.rating = rating;
     }
 
-    public SavedMovie(){
+    public SavedMovie() {
 
     }
 
@@ -80,4 +81,12 @@ public class SavedMovie {
     public void setRating(int rating) {
         this.rating = rating;
     }
+
+
+    public void sortNumbers(){
+        int[] numbers = {8, 3, 7, 9, 1, 2, 4};
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
+    }
+
 }
